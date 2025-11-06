@@ -1,12 +1,12 @@
 # System-Level Programming Assessment
 
-This project contains 4 questions that test C, Assembly, Python, and shared libraries.
+This project consists of 4 tasks that assess skills in C, Assembly, Python, and shared libraries.
 
 ---
 
-## Question 1: Disassemble ELF File  
+## Question 1: ELF File Disassembly
 File: `disasm.c`  
-This program takes the path to an ELF executable file as input. It uses the `objdump` command to extract the `.text` section of the binary and saves the disassembled code into a `.txt` file.
+This program accepts the path to an ELF executable as input. It uses the objdump command to extract the .text section and saves the disassembled output into a .txt file.
 
 ### How to run:
 ```bash
@@ -16,9 +16,9 @@ gcc disasm.c -o disasm
 
 ---
 
-## Question 2: ATM in Assembly  
+## Question 2: ATM Simulation in Assembly 
 File: `atm.asm`  
-This is an x86 Assembly program that simulates basic ATM functions: Deposit, Withdraw, Check Balance, and Exit. It starts with an initial balance of 1000 and updates it based on user input. Each function is modular.
+An x86 Assembly program that mimics basic ATM operations: Deposit, Withdraw, Check Balance, and Exit. It begins with a balance of 1000 and updates it based on user interactions. Each operation is implemented as a separate module.
 
 ### How to run:
 ```bash
@@ -31,7 +31,7 @@ ld -m elf_i386 atm.o -o atm
 
 ## Question 3: IoT Sensor Monitor (C + Python)  
 Files: `sim.c`, `setup.py`, `plot.py`  
-This project simulates periodic IoT sensor readings: temperature, humidity, and battery level. The C file (`sim.c`) is compiled as a Python extension. The Python script (`plot.py`) uses that extension to fetch data every 2 seconds for 30 seconds and plots real-time graphs using `matplotlib`.
+This project simulates periodic readings from IoT sensors: temperature, humidity, and battery level. The C file (sim.c) is compiled into a Python extension. The Python script (plot.py) fetches data every 2 seconds for 30 seconds and visualizes it in real-time using matplotlib.
 
 ### How to run:
 ```bash
@@ -48,9 +48,9 @@ python3 plot.py
 
 ---
 
-## Question 4: Diary Manager with Encryption  
+## Question 4: Encrypted Diary Manager
 Files: `crypto.c`, `diary.c`  
-This is a command-line diary manager. It uses a shared library to encrypt and decrypt personal diary entries using a simple symmetric key (key = 4). The encrypted entries are stored in memory. To view them, the user must enter the correct password.
+A command-line diary application that encrypts and decrypts diary entries with a simple symmetric key (key = 4) using a shared library. Encrypted entries are stored in memory, and a correct password is required to view them.
 
 ### How to run:
 ```bash
@@ -68,3 +68,4 @@ export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 ---
 
 Note: All programs are built and tested on Linux.
+
